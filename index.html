@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face detection on the browser using javascript !</title>
+  <script defer src="face-api.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form onsubmit="matchImages(event)">
+    <input type="file" accept=".png" id="img1">
+    <Br><Br>
+    <input type="file" accept=".png" id="img2">
+    <Br><Br>
+    <p>*Inaccuracy (0 to 7) , 0=>Most Accuracy and 7=>Low Accuracy , Recommended=>5</p>  
+    <label for="accuracy">Inaccuracy :</label>
+    <input type="number" min="0" max="7" id="accuracy">
+    <Br><Br>
+    <button>Match Faces</button>
+  </form>
+  <p>Result : <span id="result"></span></p>
+  <p id="faceMatched"></p>
+</body>
+<script src="script.js"></script>
+</html>
